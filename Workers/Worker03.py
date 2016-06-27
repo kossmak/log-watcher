@@ -1,10 +1,13 @@
-from WorkerBase import WorkerBase
-import time
-import random
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from . import WorkerBase
+
 
 class Worker03(WorkerBase):
-    def __init__(self, info, log_queue):
-        WorkerBase.__init__(self, info, log_queue)
+    # def __init__(self, info, log_queue, *args, **kw):
+    #     super(Worker03, self).__init__(info, log_queue, *args, **kw)
+    #     pass  # пустое переопределение конструктора можно опустить
 
     def run(self):
         for i in xrange(3):

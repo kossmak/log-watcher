@@ -1,10 +1,14 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import multiprocessing as mp
-import time
 import random
+import time
+
 
 class Worker01(mp.Process):
-    def __init__(self, info, log_queue):
-        mp.Process.__init__(self)
+    def __init__(self, info, log_queue, *args, **kw):
+        super(Worker01, self).__init__(*args, **kw)
         self.name = info['name']
         self.filename = info['watch']
         self.log_queue = log_queue

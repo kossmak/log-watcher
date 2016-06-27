@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 cfg = {
     'logfile': '/tmp/test.log',
     'workers': [
@@ -8,6 +11,9 @@ cfg = {
         },
         {
             'name': 'w02',
+            # FIXME: по pep8 названия пакетов и модулей д/б с маленькой буквы
+            # а название класса с большой, ага
+            # тогда можно разделить параметр 'class' на module_path и class_name
             'class': 'Workers.Worker02',
             'watch': '/tmp/t02.log'
         },

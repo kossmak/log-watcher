@@ -1,10 +1,16 @@
-from WorkerBase import WorkerBase
-import time
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import random
+import time
+
+from . import WorkerBase
+
 
 class Worker02(WorkerBase):
-    def __init__(self, info, log_queue):
-        WorkerBase.__init__(self, info, log_queue)
+    # def __init__(self, info, log_queue, *args, **kw):
+    #     super(Worker02, self).__init__(info, log_queue, *args, **kw)
+    #     pass  # пустое переопределение конструктора можно опустить
 
     def run(self):
         self.send_message("begin")
